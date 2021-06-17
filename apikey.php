@@ -20,13 +20,19 @@ function jsonOut($status, $message, $data) {
     echo json_encode($respon);
 }
 
-function getFilm() {
-    $film = [
-        ["title" => "FF9", "konten" => "film ini film ke-9"],
-        ["title" => "FF1", "konten" => "film ini film ke-1"],
-        ["title" => "FF2", "konten" => "film ini film ke-2"]
-    ];
-    return $film;
+function getFilm() {   
+        include 'conn.php';
+        $sql = "select * from mahasiswa";
+        $koneksi = mysqli_query($conn, $sql);
+
+        while ($data = mysqli_fetch_array($koneksi)){
+            $datanya[]=array(
+                'npm' => $data['npm'],
+                'nama' => $data['nama'],
+                'jurusan' => $data['jurusan']
+            );
+        }
+    return $datanya;
 }
 
 if (isValid($_GET)) {
