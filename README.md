@@ -1,2 +1,2 @@
-# rest-api
-Lathan Rest Api
+# Latihan Rest Api 
+Latihan GET Api dengan menggunakan PHP
