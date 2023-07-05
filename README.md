@@ -1,2 +1,2 @@
 # Latihan Rest Api 
-Latihan GET Api dengan menggunakan PHP
+Latihan GET Rest Api dengan menggunakan PHP
